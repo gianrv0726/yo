@@ -1,0 +1,135 @@
+
+<html lang="en-us"><head>
+<title>Site administration | Django site admin</title>
+
+<link rel="stylesheet" type="text/css" href="/static/admin/css/base.css">
+<link rel="stylesheet" type="text/css" href="/static/admin/css/dashboard.css">
+
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/admin/css/responsive.css">
+
+    <title>..::Pagina Principal::..</title>
+    <meta charset="utf-8"/>
+
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous"> -->
+    {% load static %}
+
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'login/nuevo.css' %}" />
+  -->
+    <link rel="stylesheet" type="text/css" href="{% static 'login/estilo01.css' %}" />
+  <!--    <link rel="stylesheet" type="text/css" href="{% static 'login/estiloBuscar.css' %}" /> -->
+  <link rel="stylesheet" type="text/css" href="{% static 'login/Bootstrap.min.css' %}" />
+<meta name="robots" content="NONE,NOARCHIVE">
+</head>
+
+
+<body class=" dashboard" data-admin-utc-offset="0">
+
+<!-- Container -->
+<div id="container">
+
+
+    <!-- Header -->
+    <div id="header">
+        <div id="branding">
+
+<h2 id="site-name">Rusia 2018 App</h2>
+
+        </div>
+
+
+        <div id="user-tools">
+
+                Bienvenido,
+                <strong>{{ user.username }}</strong>.
+
+
+
+                <a href="{% url 'login:logout_user' %}">Log out</a>
+
+        </div>
+
+
+
+    </div>
+    <!-- END Header -->
+
+
+
+
+
+
+
+    <!-- Content -->
+    <div id="content" class="colMS">
+
+        <h1>Pagina Principal</h1>
+
+<div id="content-main">
+
+
+
+        <div class="app-auth module">
+        <table>
+        <caption>
+            <h1> Juegos Disponibles </h1>
+        </caption>
+
+            <tbody><tr class="model-group">
+
+                <th scope="row"><a href=""> </a></th>
+
+
+
+                <td><a href="" class="addlink"> </a></td>
+
+
+
+                <td><a href="" class="changelink"> </a></td>
+
+            </tr>
+
+
+
+        </tbody></table>
+        </div>
+
+
+</div>
+
+
+<div id="content-related">
+    <div class="module" id="recent-actions-module">
+          <h2>Recent actions</h2>
+          <h3>My actions</h3>
+
+
+
+              <ul class="actionlist">
+
+              <li class="addlink">
+
+
+
+                  <br>
+
+                      <span class="mini quiet">Post</span>
+
+              </li>
+
+              </ul>
+
+    </div>
+</div>
+
+        <br class="clear">
+    </div>
+    <!-- END Content -->
+
+    <div id="footer"></div>
+</div>
+<!-- END Container -->
+
+
+
+</body></html>
